@@ -95,7 +95,7 @@ end
 
 function Game:draw()
     if self.state == "menu" then
-        love.graphics.printf("🏴‍☠️ PIRATE WARS\nPress [Enter] to Start", 0, love.graphics.getHeight() / 2 - 40, love.graphics.getWidth(), "center")
+        love.graphics.printf("PIRATE WARS\nPress [Enter] to Start", 0, love.graphics.getHeight() / 2 - 40, love.graphics.getWidth(), "center")
     elseif self.state == "play" then
         self.player:draw()
         for _, enemy in ipairs(self.enemies) do
@@ -104,9 +104,9 @@ function Game:draw()
         love.graphics.print("Wave: " .. self.waveNumber, 10, 10)
         love.graphics.print("Press [P] to Pause", 10, 30)
     elseif self.state == "pause" then
-        love.graphics.printf("⏸️ PAUSED\nPress [P] to Resume\n[Q] to Quit", 0, love.graphics.getHeight() / 2, love.graphics.getWidth(), "center")
+        love.graphics.printf("PAUSED\nPress [P] to Resume\n[Q] to Quit", 0, love.graphics.getHeight() / 2, love.graphics.getWidth(), "center")
     elseif self.state == "gameover" then
-        love.graphics.printf("💀 GAME OVER 💀\nPress [R] to Restart\n[Q] to Quit", 0, love.graphics.getHeight() / 2, love.graphics.getWidth(), "center")
+        love.graphics.printf("GAME OVER\nPress [R] to Restart\n[Q] to Quit", 0, love.graphics.getHeight() / 2, love.graphics.getWidth(), "center")
     end
 end
 
